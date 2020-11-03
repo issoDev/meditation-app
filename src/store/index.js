@@ -1,11 +1,21 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store ({
-  state: {},
+  state: {
+    musics: []
+  },
   getters: {},
-  mutations: {},
-  actions: {}
+  mutations: {
+    GET_MUSICS(state, musics) {
+      state.musics = musics
+    }
+  },
+  actions: {
+    async getMusics({commit}, musics) {
+      commit('GET_MUSICS', musics)
+    }
+  }
 })

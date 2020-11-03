@@ -10,7 +10,7 @@ import TheHeader from '@/components/TheHeader';
 
 export default {
   name: 'App',
-  components: {TheHeader}
+  components: { TheHeader }
 }
 </script>
 
