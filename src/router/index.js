@@ -21,7 +21,8 @@ const routes = [
   {
     path: '/music/:id',
     name: 'listen-music',
-    component: ListenMusic
+    component: ListenMusic,
+    params: true
   }
 
 ];

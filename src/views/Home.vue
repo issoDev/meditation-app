@@ -12,15 +12,22 @@
         </div>
       </div>
     </div>
-    <div class="musics">
-      <div class="container musics-container">
-        <div class="music">
-          <div class="imgBx">
-            <img src="https://images.pexels.com/photos/4210811/pexels-photo-4210811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    <div class="musics" >
+      <div class="container">
+        <div class="musics-container" >
+          <div v-for="music in musics" :key="music.id">
+            <router-link class="music-box" :to="{name: 'listen-music', params: { id: music.id}}">
+              <div class="music">
+                <div class="imgBx">
+                  <img :src="music.cover" alt="">
+                </div>
+                <div class="textBx">
+                  <p>{{ music.title }}</p> 
+                </div>
+              </div>
+            </router-link>
           </div>
-          <div class="textBx">
-            <p>Hello World</p> 
-          </div>
+          
         </div>
       </div>
     </div>
@@ -86,45 +93,62 @@
   .musics {
     min-height: 50vh;
     width: 100%;
-    
-    .musics-container {
-      min-height: 50vh;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+  }
 
-      .music {
+  .musics-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .music {
+      position: relative;
+      background-color: white;
+      box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.56);
+      margin: 30px 50px 0;
+      transition: .3s;
+
+      &:hover {
+        transform: translateX(20px);
+      }
+
+      .imgBx {
         position: relative;
-        background-color: white;
-        box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.56);
+        width: 250px;
+        height: 270px;
+      }
 
-        .imgBx {
-          position: relative;
-          width: 250px;
-          height: 300px;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        transition: .3s;
+
+        &:hover {
+          filter: grayscale(100%);
         }
+      }
 
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          top: 0;
-          left: 0;
-        }
+      .textBx {
+        text-align: center;
+        height: 50px;
 
-        .textBx {
-          text-align: center;
-          height: 45px;
-          line-height: 40px;
-
-          p {
-            font-size: 1.2rem;
-          }
+        p {
+          line-height: 50px;
+          color: #343a40;
         }
       }
     }
   }
+
+  .music-box {
+    text-decoration: none;
+    transition: .3s;
+  }
+
+  
 </style>
