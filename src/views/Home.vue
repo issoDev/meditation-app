@@ -90,7 +90,7 @@
   }
 
   .musics {
-    min-height: 50vh;
+    min-height: 55vh;
     width: 100%;
     background-color: #f8f9fa;
   }

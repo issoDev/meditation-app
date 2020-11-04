@@ -1,6 +1,7 @@
 <template>
   <div class="music-container">
     <h1>{{ music.title }}</h1>
+    <p class="text-muted"><i>if the audio player below does not work, click on musical note emoji <a :href="music.music" target="_blank">🎵</a></i></p>
     <div class="player">
       <div class="imgBx">
         <img :src="music.cover" alt="">
@@ -41,8 +42,12 @@
     justify-content: center;
     padding-top: 40px;
 
-    h1 {
+    p {
       padding-bottom: 20px;
+
+      a, a:hover {
+        text-decoration: none;
+      }
     }
 
     .player {
