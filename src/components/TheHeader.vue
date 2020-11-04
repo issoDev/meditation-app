@@ -1,18 +1,18 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <router-link class="navbar-brand text-white" to="/">Medit <span>..</span></router-link>
+        <router-link class="navbar-brand" to="/">Medit <span>..</span></router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <router-link class="nav-link text-white" to="/">Home <span class="sr-only">(current)</span></router-link>
+              <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/about">About</router-link>
+              <router-link class="nav-link" to="/about">About</router-link>
             </li>
           </ul>
         </div>
@@ -32,21 +32,17 @@
     min-height: 10vh !important;
 
     .navbar-brand {
-      font-size: 30px;
+      font-size: 35px;
+      color: #212529;
 
       span {
-        color: blueviolet;
+        color: #212529;
         font-size: 20px;
       }
     }
     .nav-link {
       margin-left: 30px;
-    }
-
-    .navbar-line {
-      height: 3px;
-      width: 100%;
-      background-color: white;
+      color: #212529;
     }
   }
 </style>

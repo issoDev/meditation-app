@@ -7,7 +7,7 @@
             <h1>Listen to our selection and relax</h1>
           </div>
           <div class="showcase-img-container">
-
+            <img src="../assets/relax.svg" width="180" alt="">
           </div>
         </div>
       </div>
@@ -44,13 +44,13 @@
     min-height: 40vh;
     background-color: #343a40;
 
-    .showcase-content {
-      display: flex;
-      height: 100%;
-      min-height: 40vh;
-
-      .showcase-text, .showcase-showcase-img-container {
-        flex: 1
+    .container {
+      display: flex !important;
+      
+      .showcase-text, .showcase-img-container {
+        flex: 1;
+        min-height: 40vh;
+        width: 100%;
       }
       .showcase-text {
         width: 100%;
@@ -60,7 +60,15 @@
 
         h1 {
           color: white;
+          font-size: 50px;
+          text-shadow: 2px 2px 2px rgba(128, 128, 128, 0.424);
         }
+      }
+
+      .showcase-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
