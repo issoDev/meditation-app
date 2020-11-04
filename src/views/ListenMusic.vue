@@ -6,19 +6,22 @@
         <img :src="music.cover" alt="">
       </div>
       <audio controls>
-        <source src="https://soundcloud.com/meditation-music/the-coming-race-download-1-hour-of-music-for-free" type="text/html">
+        <source :src="music.music">
       </audio>
     </div>
   </div>
 </template>
 
 <script>
+  import api from '@/services/api';
+  const musicsService = new api();
+
   export default {
     name: 'ListenMusic',
-    mounted() {
-      const id = parseInt(this.$route.params.id);
-      this.$store.dispatch('getMusic', id);
-      console.log(this.$store.state.music);
+    async created() {
+      const id = this.$route.params.id;
+      const res = await musicsService.getOneMusic(id);
+      this.$store.dispatch('getMusic', res.data.content);
     },
     computed: {
       music() {
