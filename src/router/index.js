@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 
 import Home from '../views/Home.vue';
 import About from '../views/About.vue'
+import ListenMusic from '../views/ListenMusic.vue'
 
 const routes = [
   {
@@ -16,7 +17,13 @@ const routes = [
     path: '/about',
     name: 'about',
     component: About
+  },
+  {
+    path: '/music/:id',
+    name: 'listen-music',
+    component: ListenMusic
   }
+
 ];
 
 const router = new VueRouter({

@@ -6,4 +6,7 @@ export default class MusicService {
   getMusics() {
     return axios.get(baseUrl);
   }
+  getOneMusic(id) {
+    return axios.get(baseUrl/`${id}`);
+  }
 }
