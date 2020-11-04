@@ -45,25 +45,31 @@
       padding-bottom: 20px;
     }
 
-    .imgBx {
+    .player {
       position: relative;
-      width: 350px;
-      height: 400px;
-    }
+      background-color: #F1F3F4;
+      box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.56);
 
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-    }
+      .imgBx {
+        position: relative;
+        width: 350px;
+        height: 400px;
+      }
 
-    audio {
-      width: 100%;
-      outline: none;
-      border-radius: none;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+      }
+
+      audio {
+        width: 100%;
+        outline: none;
+        border-radius: none;
+      }
     }
   }
 </style>

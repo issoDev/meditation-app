@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <router-link class="navbar-brand" to="/">Medit <span>..</span></router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
       color: #212529;
 
       span {
-        color: #212529;
+        color: #1d5e9e;
         font-size: 20px;
       }
     }

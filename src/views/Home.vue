@@ -14,7 +14,7 @@
     </div>
     <div class="musics" >
       <div class="container">
-        <div class="musics-container" >
+        <div class="musics-container">
           <div v-for="music in musics" :key="music.id">
             <router-link class="music-box" :to="{name: 'listen-music', params: { id: music.id}}">
               <div class="music">
@@ -27,7 +27,6 @@
               </div>
             </router-link>
           </div>
-          
         </div>
       </div>
     </div>
@@ -93,6 +92,7 @@
   .musics {
     min-height: 50vh;
     width: 100%;
+    background-color: #f8f9fa;
   }
 
   .musics-container {
